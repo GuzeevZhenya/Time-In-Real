@@ -6,10 +6,10 @@ const MIN_LENGTH = 13;
 const showAmPm = true;
 //Показываем время
 function showTime() {
-    let today = new Date(),
-        hour = today.getHours(),
-        min = today.getMinutes(),
-        sec = today.getSeconds();
+    let today = new Date();
+    let hour = today.getHours();
+    let min = today.getMinutes();
+    let sec = today.getSeconds();
 
     const amPm = hour >= 12 ? 'PM' : 'AM';
     //12 Часовой формат
