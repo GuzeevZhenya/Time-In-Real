@@ -50,14 +50,8 @@ function getName() {
 //Set Name
 function setName(e) {
     const target = e.target;
-    if (e.type === 'keypress') {
-        if (e.wich == MIN_LENGTH || e.keyCode == MIN_LENGTH) {
-            localStorage.setItem('name', target.value);
-            name.blur();
-        }
-    } else {
-        localStorage.setItem('name', target.value);
-    }
+    localStorage.setItem('name', target.value);
+    
 }
 
 // Get Focus
@@ -68,14 +62,7 @@ function getFocus() {
 // Set Focus
 function setFocus(e) {
     const target = e.target;
-    if (e.type === 'keypress') {
-        if (e.keyCode === MIN_LENGTH) {
-            localStorage.setItem('focus', target.value);
-            focus.blur();
-        }
-    } else {
-        localStorage.setItem('focus', target.value);
-    }
+    localStorage.setItem('focus', target.value);
 }
 name.addEventListener('keypress', setName);
 name.addEventListener('blur', setName);
